@@ -1,0 +1,24 @@
+#Question: API se data kis format me aayega?
+#Iske liye Pydantic Schema use karte hain.
+from pydantic import BaseModel, EmailStr
+
+
+class UserCreate(BaseModel):
+    username: str
+    email: EmailStr
+    password: str
+
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+
+class UserResponse(BaseModel):
+    id: int
+    username: str
+    email: EmailStr
+
+    model_config = {
+        "from_attributes": True
+    }
