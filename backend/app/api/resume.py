@@ -10,4 +10,10 @@ router = APIRouter(
 
 @router.post("/upload")
 def upload_resume(file: UploadFile = File(...)):
-    return save_resume(file)
+    data= save_resume(file)
+
+    return {
+        "success": True,
+        "message": "Resume uploaded successfully.",
+        "data": data,
+    }
