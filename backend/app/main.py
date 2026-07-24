@@ -8,6 +8,7 @@ from app.api.rewrite import router as rewrite_router
 from app.api.cover_letter import router as cover_letter_router
 from app.api.export import router as export_router
 from app.api.generate import router as generate_router
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import all models here
 from app.models.user import User
@@ -26,6 +27,13 @@ app.include_router(rewrite_router)
 app.include_router(cover_letter_router)
 app.include_router(export_router)
 app.include_router(generate_router)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")

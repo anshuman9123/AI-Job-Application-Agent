@@ -1,3 +1,4 @@
+import json
 from langchain_core.messages import HumanMessage
 
 from app.prompts.ats_prompt import ATS_PROMPT
@@ -19,14 +20,16 @@ Job Description:
 """
 
         response = llm.invoke([HumanMessage(content=prompt)])
-        print("Response:", response)
-        print("Content:", repr(response.content))
-        print("Content type:", type(response.content))
 
+        content = response.content
 
+        if isinstance(content, list):
+            content = content[0]["text"]
 
-        if isinstance(response.content, list):
-            return response.content[0]["text"]
+        content = (
+            content.replace("```json", "")
+            .replace("```", "")
+            .strip()
+        )
 
-
-        return response.content
+        return json.loads(content)
