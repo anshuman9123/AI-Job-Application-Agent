@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import UploadResume from "../pages/UploadResume";
 import JobDescription from "../pages/JobDescription";
+import RewriteResume from "../pages/RewriteResume";
 
 function AppRoutes() {
   return (
@@ -15,6 +16,8 @@ function AppRoutes() {
         <Route path="/dashboard" element={<Dashboard />} />
          <Route path="/upload" element={<UploadResume />} />
          <Route path="/analyze" element={<JobDescription />} />
+         <Route path="/rewrite" element={<RewriteResume />} />
+         
       </Routes>
     </BrowserRouter>
   );

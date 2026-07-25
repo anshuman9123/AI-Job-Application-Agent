@@ -26,4 +26,10 @@ export const analyzeResume = async (resumeText, jobDescription) => {
   return response.data;
 };
 
+export const rewriteResume = (resumeText, jobDescription) =>
+  api.post("/rewrite/", {
+    resume_text: resumeText,
+    job_description: jobDescription,
+  });
+
 export default api;
