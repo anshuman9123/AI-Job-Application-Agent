@@ -1,3 +1,20 @@
+<p align="center">
+  <img src="assets/banner.png" alt="AI Job Application Agent Banner" width="100%">
+</p>
+<div align="center">
+
+# 🚀 AI Job Application Agent
+
+AI-powered Resume Optimization Platform built with **FastAPI, React, PostgreSQL & Docker**
+
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.116-009688?style=for-the-badge&logo=fastapi)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-316192?style=for-the-badge&logo=postgresql)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</div>
 # 🚀 AI Job Application Agent
 
 An AI-powered platform that helps job seekers optimize their resumes for specific job descriptions. The application analyzes ATS compatibility, rewrites resumes, generates tailored content, and provides an improved resume ready for job applications.
