@@ -29,7 +29,10 @@ app.include_router(export_router)
 app.include_router(generate_router)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ai-job-application-agent-chi.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
