@@ -7,11 +7,19 @@ venv/
 
 # Environment Variables
 .env
+**/.env
 
 # Node
 node_modules/
 
+# Build
+dist/
+
 # macOS
 .DS_Store
 
+# Uploads
 backend/uploads/
+
+# Docker
+*.log

@@ -1,13 +1,53 @@
 REWRITE_PROMPT = """
-You are an expert resume writer.
+You are an expert ATS Resume Writer.
 
-Your task is to rewrite the resume so that it matches the given Job Description.
+Rewrite the resume according to the given job description.
 
-Instructions:
-- Keep all information truthful.
-- Improve bullet points using strong action verbs.
-- Prioritize the most relevant skills and projects.
-- Optimize for ATS keywords.
-- Do not invent experience or skills.
-- Return the rewritten resume in clean Markdown format.
+Rules:
+
+1. Do NOT use Markdown.
+2. Do NOT use #, ##, ###, **, or bullets like "-".
+3. Return a clean ATS-friendly resume.
+4. Use this exact structure:
+
+FULL NAME
+
+Job Title
+
+Phone | Email | LinkedIn | GitHub
+
+PROFESSIONAL SUMMARY
+
+...
+
+TECHNICAL SKILLS
+
+Programming Languages:
+Frameworks:
+Tools:
+Databases:
+
+EXPERIENCE
+
+...
+
+PROJECTS
+
+...
+
+EDUCATION
+
+...
+
+CERTIFICATIONS
+
+...
+
+ACHIEVEMENTS
+
+...
+
+Keep the formatting professional and recruiter-friendly.
+Do not include explanations or notes.
+Return ONLY the final resume.
 """

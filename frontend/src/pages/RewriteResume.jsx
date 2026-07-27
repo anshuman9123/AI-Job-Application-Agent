@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { rewriteResume } from "../services/api";
 import jsPDF from "jspdf";
+import ResumeTemplate from "../components/ResumeTemplate";
 
 function RewriteResume() {
   const { state } = useLocation();
@@ -75,12 +76,7 @@ setRewrittenResume(
             </div>
           ) : (
             <>
-          <textarea
-            
-                value={rewrittenResume}
-                onChange={(e) => setRewrittenResume(e.target.value)}
-                className="w-full h-[700px] border border-gray-300 rounded-xl p-5 mt-8 font-mono text-sm leading-7 resize-none outline-none focus:ring-2 focus:ring-blue-500"
-                />
+         <ResumeTemplate />
 <button
   onClick={downloadPDF}
   style={{

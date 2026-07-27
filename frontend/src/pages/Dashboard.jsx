@@ -82,7 +82,9 @@ function Dashboard() {
                 </p>
                 </Link>
 
-            <div className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition duration-300 cursor-pointer">
+            <Link
+                to="/analyze"
+             className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition duration-300 cursor-pointer">
               <div className="bg-green-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                 <FaSearch className="text-green-600 text-2xl" />
               </div>
@@ -92,7 +94,7 @@ function Dashboard() {
               <p className="text-slate-500 mt-2">
                 Analyze how well your resume matches the job description.
               </p>
-            </div>
+            </Link>
 
             <div className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition duration-300 cursor-pointer">
               <div className="bg-purple-100 w-14 h-14 rounded-xl flex items-center justify-center mb-4">

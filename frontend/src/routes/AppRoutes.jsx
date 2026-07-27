@@ -17,6 +17,8 @@ function AppRoutes() {
          <Route path="/upload" element={<UploadResume />} />
          <Route path="/analyze" element={<JobDescription />} />
          <Route path="/rewrite" element={<RewriteResume />} />
+
+         <Route path="/analyze" element={<JobDescription />} />
          
       </Routes>
     </BrowserRouter>
